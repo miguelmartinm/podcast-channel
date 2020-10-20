@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+}
+
+.Navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFFFFF;
+}
+
+.Navigation-logo {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0.625em 0 0.625em 1em;
+}
+
+.Navigation-actionCross {
+  display: none;
+}
+
+.Navigation-actionBars {
+  width: 0.875em;
+  height: 0.875em;
+  padding-right: 1em;
+}
+
+.Navigation-items {
+  margin: 0;
+  padding-left: 0;
+  height: 14em;
+  width: 20em;
+  background-color: #0000EC;
+  max-height: 0;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.Navigation-item {
+  list-style: none;
+  padding: 1em 0 1em 1em;
+}
+
+.Navigation-item:hover {
+  color: #0000EC;
+  background-color: #fff;
+  border-radius: 8px 8px;
+}
+
+.Navigation-link {
+  display: block;
+  color: #FFFFFF;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.Navigation-link:hover {
+  color: #0000EC;
+  background-color: #fff;
+}
+
+.Navigation-hiddenAction {
+  display: none;
+}
+
+.Navigation-hiddenAction:checked ~ .Navigation-items {
+  max-height: 100vh;
+}
+
+.Navigation-hiddenAction:checked ~ .Navigation-items-actionBars {
+  display: inline;
+}
+
+.Navigation-hiddenAction:checked ~ .Navigation-actionCross {
+  display: inline-block;
+  width: 0.875em;
+  height: 0.875em;
+  padding-right: 1em;
+}
+
+.Navigation-hiddenAction:checked ~ .Navigation-actionBars {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .Navigation-actionCross + .Navigation-actionBars {
+    display: none;
+  }
+  .Navigation-logo {
+    width: 1.875em;
+    height: 1.875em;
+    padding: 1.375em 0 1.375em 6.25em;
+  }
+  .Navigation-items {
+    width: 60px;
+    height: 80px;
+    display: inline-block;
+    background-color: red;
+  }
+  .Navigation-item {
+    display: inline-block;
+  }
+  .Navigation-link {
+    display: inline-block;
+    color: black;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
