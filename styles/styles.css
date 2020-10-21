@@ -1,7 +1,3 @@
-body {
-  margin: 0;
-}
-
 .Navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +10,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FFFFFF;
 }
 
 .Navigation-logo {
@@ -31,10 +26,12 @@ body {
 .Navigation-actionBars {
   width: 0.875em;
   height: 0.875em;
-  padding-right: 1em;
+  padding-right: 1.1875em;
+  display: inline-block;
 }
 
 .Navigation-items {
+  display: block;
   margin: 0;
   padding-left: 0;
   height: 14em;
@@ -43,33 +40,35 @@ body {
   max-height: 0;
   width: 100%;
   overflow: hidden;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease;
 }
 
 .Navigation-item {
   list-style: none;
-  padding: 1em 0 1em 1em;
 }
 
 .Navigation-item:hover {
   color: #0000EC;
-  background-color: #fff;
-  border-radius: 8px 8px;
+  background-color: #FFFFFF;
+  border-radius: 0.5em 0.5em;
 }
 
 .Navigation-link {
+  padding: 1.125em 0 1em 1em;
   display: block;
   color: #FFFFFF;
   font-size: 1em;
   text-transform: uppercase;
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
 }
 
 .Navigation-link:hover {
   color: #0000EC;
-  background-color: #fff;
+  background-color: #FFFFFF;
+  border-radius: 0.5em 0.5em;
 }
 
 .Navigation-hiddenAction {
@@ -78,10 +77,6 @@ body {
 
 .Navigation-hiddenAction:checked ~ .Navigation-items {
   max-height: 100vh;
-}
-
-.Navigation-hiddenAction:checked ~ .Navigation-items-actionBars {
-  display: inline;
 }
 
 .Navigation-hiddenAction:checked ~ .Navigation-actionCross {
@@ -96,19 +91,33 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .Navigation-actionCross + .Navigation-actionBars {
+  .Navigation {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 80px;
+  }
+  .Navigation-hiddenAction:checked ~ .Navigation-actionCross {
+    display: none;
+  }
+  .Navigation-actionCross, .Navigation-actionBars {
     display: none;
   }
   .Navigation-logo {
+    display: inline-block;
     width: 1.875em;
     height: 1.875em;
-    padding: 1.375em 0 1.375em 6.25em;
+  }
+  .Navigation-hiddenAction:checked ~ .Navigation-items {
+    max-height: 50px;
+    width: initial;
+    background-color: #FFFFFF;
+    -webkit-transition: max-height 0.2s ease;
+    transition: max-height 0.2s ease;
   }
   .Navigation-items {
-    width: 60px;
-    height: 80px;
-    display: inline-block;
-    background-color: red;
+    max-height: 50px;
+    width: initial;
+    background-color: #FFFFFF;
   }
   .Navigation-item {
     display: inline-block;
@@ -116,6 +125,13 @@ body {
   .Navigation-link {
     display: inline-block;
     color: black;
+    padding: 1em;
+    margin: 0 0.3125em 0 0.3125em;
+  }
+  .Navigation-link:hover {
+    color: #FFFFFF;
+    background-color: #0000EC;
+    border-radius: 0.5em 0.5em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
