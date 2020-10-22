@@ -19,38 +19,22 @@
   padding: 0.625em 0 0.625em 1em;
 }
 
-.Navigation-actionCross {
-  display: none;
-}
-
-.Navigation-actionBars {
-  width: 0.875em;
-  height: 0.875em;
-  padding-right: 1.1875em;
-  display: inline-block;
-}
-
 .Navigation-items {
-  display: block;
   margin: 0;
   padding-left: 0;
   height: 14em;
   width: 20em;
-  background-color: #0000EC;
+  background: #0000EC;
   max-height: 0;
   width: 100%;
   overflow: hidden;
-  -webkit-transition: max-height 0.5s ease;
-  transition: max-height 0.5s ease;
-}
-
-.Navigation-item {
-  list-style: none;
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
 }
 
 .Navigation-item:hover {
-  color: #0000EC;
-  background-color: #FFFFFF;
+  color: #19225a;
+  background: #FFFFFF;
   border-radius: 0.5em 0.5em;
 }
 
@@ -63,43 +47,61 @@
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
+  font-weight: 200;
 }
 
 .Navigation-link:hover {
   color: #0000EC;
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   border-radius: 0.5em 0.5em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-.Navigation-hiddenAction {
+.Navigation-actionCross {
   display: none;
 }
 
-.Navigation-hiddenAction:checked ~ .Navigation-items {
+.Navigation-actionBars {
+  width: 0.875em;
+  height: 0.875em;
+  padding-right: 1.1875em;
+  display: inline-block;
+}
+
+.Navigation-hiddenCheckbox {
+  display: none;
+}
+
+.Navigation-hiddenCheckbox:checked ~ .Navigation-items {
   max-height: 100vh;
 }
 
-.Navigation-hiddenAction:checked ~ .Navigation-actionCross {
+.Navigation-hiddenCheckbox:checked ~ .Navigation-actionCross {
   display: inline-block;
   width: 0.875em;
   height: 0.875em;
   padding-right: 1em;
 }
 
-.Navigation-hiddenAction:checked ~ .Navigation-actionBars {
+.Navigation-hiddenCheckbox:checked ~ .Navigation-actionBars {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
   .Navigation {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 80px;
   }
-  .Navigation-hiddenAction:checked ~ .Navigation-actionCross {
+  .Navigation-hiddenCheckbox:checked ~ .Navigation-actionCross {
     display: none;
   }
-  .Navigation-actionCross, .Navigation-actionBars {
+  .Navigation-actionBars {
     display: none;
   }
   .Navigation-logo {
@@ -107,31 +109,40 @@
     width: 1.875em;
     height: 1.875em;
   }
-  .Navigation-hiddenAction:checked ~ .Navigation-items {
+  .Navigation-hiddenCheckbox:checked ~ .Navigation-items {
     max-height: 50px;
     width: initial;
-    background-color: #FFFFFF;
-    -webkit-transition: max-height 0.2s ease;
-    transition: max-height 0.2s ease;
+    background: #FFFFFF;
+    -webkit-transition: none;
+    transition: none;
   }
   .Navigation-items {
     max-height: 50px;
     width: initial;
-    background-color: #FFFFFF;
+    background: #FFFFFF;
   }
   .Navigation-item {
     display: inline-block;
   }
   .Navigation-link {
     display: inline-block;
-    color: black;
+    color: #060a24;
     padding: 1em;
     margin: 0 0.3125em 0 0.3125em;
   }
   .Navigation-link:hover {
-    color: #FFFFFF;
-    background-color: #0000EC;
     border-radius: 0.5em 0.5em;
+    color: #00f3bb;
+    text-decoration: line-through;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .Navigation-link:active {
+    color: rgba(6, 10, 36, 0.56);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 200;
   }
 }
 /*# sourceMappingURL=styles.css.map */

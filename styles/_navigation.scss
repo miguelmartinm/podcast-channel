@@ -1,49 +1,34 @@
-
 .Navigation {
     display: flex;    
     flex-wrap: wrap;         
     justify-content: space-between;
     align-items: center;
-    // display: block;
-    // max-height: em(70);        
-    // background-color: #FFFFFF;
-    // padding: em(10) 0 em(10) em(16);       
+
     &-logo {
         display: inline-block;
         width: em(24);
         height: em(24);
         padding: em(10) 0 em(10) em(16);
     }
-    &-actionCross {
-        display: none;           
-    }
-    &-actionBars {        
-        width: em(14);
-        height: em(14);
-        padding-right: em(19);            
-        display: inline-block;
-        // justify-content: center;}
-    }    
+        
     &-items {     
-        display: block;   
+        // display: block;   
         margin: 0;
         padding-left: 0;    
         height: em(224); 
         width: em(320);       
-        background-color: #0000EC;
+        background: #0000EC;
         max-height: 0;
         width: 100%;
         overflow: hidden;
-        transition: max-height 0.5s ease;
+        transition: max-height 0.3s ease;
     }
  
     &-item {                
-        list-style: none;                  
-        // padding: em(16) 0 em(16) em(16);
-
+        // list-style: none;
         &:hover {
-            color:  #0000EC;
-            background-color: #FFFFFF;            
+            color:  #19225a;
+            background: #FFFFFF;               
             border-radius: em(8) em(8);           
         }  
     }
@@ -54,25 +39,37 @@
         color:#FFFFFF;                  
         font-size: em(16);
         text-transform: uppercase;
-        text-decoration: none;             
-        // border-radius: em(8) em(8);    
-        @include font-family("mono");  
+        text-decoration: none;                                                     
+        @include font-family("mono");        
+
         &:hover {
             color:  #0000EC;
-            background-color: #FFFFFF;       
-            border-radius: em(8) em(8);     
+            background: #FFFFFF;       
+            border-radius: em(8) em(8);  
+            @include font-family("mono-medium");               
+            transition: all 0.4s ease;
         }      
     }
 
-    &-hiddenAction {
+    &-actionCross {
+        display: none;           
+    }
+    &-actionBars {        
+        width: em(14);
+        height: em(14);
+        padding-right: em(19);            
+        display: inline-block;        
+    }
+
+    &-hiddenCheckbox {
         display: none;
     }  
     
-    &-hiddenAction:checked ~ &-items {
+    &-hiddenCheckbox:checked ~ &-items {
         max-height: 100vh;           
     }
 
-    &-hiddenAction:checked ~ &-actionCross {
+    &-hiddenCheckbox:checked ~ &-actionCross {
         // display: inline;
         display: inline-block;
         width: em(14);
@@ -80,60 +77,62 @@
         padding-right: em(16);            
     }
 
-    &-hiddenAction:checked ~ &-actionBars {
+    &-hiddenCheckbox:checked ~ &-actionBars {
         display: none;
     }
 
-    @media screen and (min-width: 768px) {        
-        // flex-wrap: nowrap;
-        justify-content: space-around;    
-        height: 80px;           
-        &-hiddenAction:checked ~ &-actionCross {
+    @media screen and (min-width: 768px) {                
+        justify-content: space-between;    
+        height: 80px;    
+
+        &-hiddenCheckbox:checked ~ &-actionCross {
             display: none;
         }
 
-        &-actionCross, &-actionBars {
+        &-actionBars {
             display: none;             
         }        
     
         &-logo {
             display: inline-block;
             width: em(30);
-            height: em(30);       
-            // transition: all 0.5s ease;     
+            height: em(30);                   
         }
     
-        &-hiddenAction:checked ~ &-items {
+        &-hiddenCheckbox:checked ~ &-items {
             max-height: 50px;            
-            width: initial;            
-            background-color: #FFFFFF;            
-            transition: max-height 0.2s ease;
+            width: initial;                   
+            background: #FFFFFF;                        
+            transition: none;
         }
 
         &-items {
             max-height: 50px;            
             width: initial;            
-            background-color: #FFFFFF;            
+            background: #FFFFFF;                 
         }
 
-
         &-item {
-            display: inline-block;  
-            // align-items: center;             
+            display: inline-block;                     
         }        
 
         &-link {
-            display: inline-block;
-            color: black;
-            // border: 1px solid;
+            display: inline-block;            
+            color: rgba($color: #060A24, $alpha: 1.0);
             padding: 1em;
-            margin: 0 em(5) 0 em(5);
+            margin: 0 em(5) 0 em(5);            
 
-            &:hover {
-                color:  #FFFFFF;
-                background-color: #0000EC;       
-                border-radius: em(8) em(8);     
+            &:hover {                
+                border-radius: em(8) em(8);                     
+                color: rgba($color: #00F3BB, $alpha: 1.0);
+                text-decoration: line-through;  
+                @include font-family("mono-medium");                
             }             
+
+            &:active {                                
+                color: rgba($color: #060A24, $alpha: 0.56);
+                @include font-family("mono");                
+            }
         }
     }
 }
