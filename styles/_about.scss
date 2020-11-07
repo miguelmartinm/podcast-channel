@@ -1,0 +1,24 @@
+.AboutUs {
+    position: relative;
+    display: flex;
+    // justify-content: center;   
+    // flex-wrap: wrap; 
+    flex-direction: column;
+
+
+    &-phone {        
+        align-self: center;
+        align-content: center;
+        width: em(360);
+        height: em(519);  
+        margin-top: -5.5em;                        
+    }
+
+    &-title {
+        @include title-format;
+    }
+
+    &-paragraph {
+        @include paragraph-format;        
+    }
+}

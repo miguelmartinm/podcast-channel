@@ -1,0 +1,14 @@
+.Interviews {
+    
+    display: flex;
+    // justify-content: center;   
+    flex-wrap: wrap;    
+    
+    &-title {
+        @include title-format;  
+    }
+
+    &-image {
+        width: 100%;
+    }
+}                                                        

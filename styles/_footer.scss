@@ -1,0 +1,26 @@
+.Footer{
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    margin-bottom: em(31);
+
+    &-textBottom {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: em(14);
+        line-height: 22px;
+        color: rgba($color: #060A24, $alpha: 1.0);
+        @include font-family('mono-medium');
+    }   
+
+    &-icon {
+        color: rgba($color: #060A24, $alpha: 1.0);
+        margin: em(16) em(17.5) 0 em(17.5);
+        text-decoration: none;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        // border: 1px solid;            
+    }
+}

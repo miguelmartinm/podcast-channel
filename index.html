@@ -10,7 +10,7 @@
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=IBM+Plex+Sans:wght@200&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;500&family=IBM+Plex+Sans:wght@200&display=swap">    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">    
 </head>
 
@@ -29,13 +29,137 @@
                 </label>
 
                 <ul class="Navigation-items">
-                    <li class="Navigation-item"><a class="Navigation-link" href="#">episodios</a></li>
-                    <li class="Navigation-item"><a class="Navigation-link" href="#">nosotros</a></li>
-                    <li class="Navigation-item"><a class="Navigation-link" href="#">entrevistas</a></li>
-                    <li class="Navigation-item"><a class="Navigation-link" href="#">tópicos</a></li>                        
+                    <li class="Navigation-item"><a class="Navigation-link" href="#Episodes">episodios</a></li>
+                    <li class="Navigation-item"><a class="Navigation-link" href="#AboutUs">nosotros</a></li>
+                    <li class="Navigation-item"><a class="Navigation-link" href="#Interviews">entrevistas</a></li>
+                    <li class="Navigation-item"><a class="Navigation-link" href="#Topics">tópicos</a></li>                        
                 </ul>                                
             </nav>        
     </header>
-</body>
 
+    <section class="title">
+        <h1 class="title-main">
+        <span class="title-WordsBlockOne">hello</span> 
+        <span class="title-WordsBlockTwo">world</span>
+        <span class="title-WordsBlockThree">pale blue dot.</span>
+        </h1>
+
+        <p class="title-paragraph">Un podcast que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>        
+        <div class="button">conocé más</div>
+    </section>
+    
+    <section class="Episodes">
+              
+        <svg class="Episodes-diagonalUp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,0 100,0 0,100"/>
+        </svg>           
+          
+        <svg class="Episodes-diagonalDown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,100 100,0 100,100"/>
+        </svg>
+        
+        <h2 class="Episodes-title" id=Episodes>Episodios</h2>
+        <iframe class="Episodes-spotify" src="https://open.spotify.com/embed-podcast/episode/461HCX0L3o4GO4BwbtOkqT" width="100" height="232" allow="encrypted-media"></iframe>        
+        <iframe class="Episodes-spotify" src="https://open.spotify.com/embed-podcast/episode/10m1knAKviCNOv8BR72STV" width="100" height="232" allow="encrypted-media"></iframe>
+        <iframe class="Episodes-spotify" src="https://open.spotify.com/embed-podcast/episode/57GJ09Pp7Gz4SWgHVTZe0K" width="100" height="232" allow="encrypted-media"></iframe>
+        <iframe class="Episodes-spotify" src="https://open.spotify.com/embed-podcast/episode/1KZ5HV2uUjFpAGCMqf7X71" width="100" height="380" allow="encrypted-media"></iframe>        
+    </section>
+
+    <section class="AboutUs">
+        <img class="AboutUs-phone" src="./images/phone.png" alt="teléfono The secret history of women in coding">        
+
+        <h2 class="AboutUs-title" id="AboutUs" >De dónde venimos</h2>
+        <p class="AboutUs-paragraph">
+            Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.
+        </p>
+
+        <p class="AboutUs-paragraph">
+            Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+        </p>        
+    </section>
+
+    <section class="Interviews">
+        <h2 class="Interviews-title" id="Interviews">
+            Invitadas/os estelares
+        </h2>
+
+        <img class="Interviews-image" src="./images/grace-hopper.png" alt="Grace Hopper">
+        <img class="Interviews-image" src="./images/Katie-Bouman.png" alt="Katie Bouman">
+        <img class="Interviews-image" src="./images/Margaret_Hamilton.png" alt="Margaret Hamilton">
+        <img class="Interviews-image" src="./images/Univac-1103.png" alt="An E.R.A.Univac 1103 computer in the 1950s">
+        <img class="Interviews-image" src="./images/Eniac.png" alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer">
+        <img class="Interviews-image" src="./images/susan-kare.png" alt="Susan Kare">
+    </section>
+
+    <section class="Topics">        
+        <h2 class="Topics-title" id="Topics">
+            Alguno de nuestros temas
+        </h2>        
+        
+        <div class="Topics-images">
+            <img class="Topics-image" src="./images/icon1.svg" alt="Icono de tres archivos apuntnado a bloque haciendo referencia a trabajo remoto">
+            <h3 class="Topics-textImage">
+                Trabajo remoto
+            </h3>            
+        </div>
+
+        <div class="Topics-images">
+            <img class="Topics-image" src="./images/icon2.svg" alt="Icono de cabeza con engranaje haciendo referencia a repensar la programación">
+            <h3 class="Topics-textImage">
+                Repensando la programación
+            </h3>
+        </div>
+
+        <div class="Topics-images">            
+            <img class="Topics-image" src="./images/icon3.svg" alt="Icono de laptop haciendo referencia a bases del código">
+            <h3 class="Topics-textImage">
+                Bases del código
+            </h3>
+        </div>
+
+        <div class="Topics-images">            
+            <img class="Topics-image" src="./images/icon4.svg" alt="Icono de circuito con base de datos integrada haciendo referencia a seguridad informática">
+            <h3 class="Topics-textImage">
+                Seguridad informática
+            </h3>
+        </div>
+    </section>
+
+    <section class="News">
+        <svg class="News-diagonalUp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="white" points="0,0 100,0 0,100"/>
+        </svg> 
+
+        <h2 class="News-title">¿Querés las últimas novedades?</h2>
+        
+        <div class="button">Escuchá los episodios</div>
+    </section>
+    
+    <footer class="Footer">
+        <h3 class="Footer-textBottom">&copy; 2019 - Hello blue pale dot</h3>
+
+        <div class="Footer-icons">
+            <a class="Footer-icon" href="https://www.spotify.com/co/" target="blank">
+                <i class="fab fa-spotify"></i>
+            </a>
+
+            <a class="Footer-icon" href="https://www.instagram.com/?hl=es-la" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a class="Footer-icon" href="https://twitter.com/?lang=es" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>            
+
+            <a class="Footer-icon" href="https://www.facebook.com" target="blank" >
+                <i class="fab fa-facebook"></i>
+            </a>
+            
+            <a class="Footer-icon" href="https://web.telegram.org/#/login" target="blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
 </html>

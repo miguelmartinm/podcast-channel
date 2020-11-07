@@ -1,0 +1,41 @@
+.Episodes {
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    margin-top: em(24);         
+    // min-height: em(1203.5);
+    // min-height: em(1600.5);
+    min-height: 100%;   
+    flex-direction: column;    
+  
+
+    &-title {          
+        @include title-format-BittenCard;
+    }      
+
+    &-diagonalUp{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 10vw;        
+    }
+
+    &-diagonalDown{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+    }
+
+    &-spotify {
+        position: relative;
+        margin: 0 11px 5.5px 11px;
+        display: block;
+        // top: 70px;
+        width: 95%;
+        border: none;
+        // display: block;
+    }    
+}
+// (font-size/browser value )*local value
+// (36/16)*10
