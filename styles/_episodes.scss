@@ -2,10 +2,11 @@
     position: relative;
     display: flex;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-    margin-top: em(24);         
+    margin-top: em(24);     
+    height: 1250px;    
     // min-height: em(1203.5);
     // min-height: em(1600.5);
-    min-height: 100%;   
+    // height: 20%;
     flex-direction: column;    
   
 
@@ -29,13 +30,52 @@
 
     &-spotify {
         position: relative;
-        margin: 0 11px 5.5px 11px;
+        margin: 0 em(11) em(5.5) em(11);
         display: block;
         // top: 70px;
         width: 95%;
         border: none;
         // display: block;
     }    
+
+    @media screen and (min-width: 768px) {
+        height: em(800);
+        display: grid;
+        grid-template-columns: 5% repeat(2, 40%) 5%;
+        grid-template-rows: 10% 5% repeat(2, 30%) 10%;       
+        align-items: center;
+        justify-items: center;
+        gap: em(20) em(20);
+
+        &-title {            
+            // margin-top: em(45);
+            justify-self: start;
+            margin: 0;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            // grid-area: 2 / 2 / 3 / 3;
+        }      
+        
+        .SpotiOne {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .SpotiTwo {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+        .SpotiThree {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+        }
+
+        .SpotiFour {
+            grid-column: 3 / 4;
+            grid-row: 4 / 5;
+        }
+    }
 }
 // (font-size/browser value )*local value
 // (36/16)*10

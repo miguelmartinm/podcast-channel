@@ -45,7 +45,11 @@
         </h1>
 
         <p class="title-paragraph">Un podcast que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>        
-        <div class="button">conocé más</div>
+        <div class="button">
+            <a class="button-link" target="_blank" href="https://open.spotify.com/show/6w3lJ6KQ0vMbp0IAobXzEM?si=Qrzt3ESBSWijzZI0FC0tiQ">
+                conocé más
+            </a>
+        </div>
     </section>
     
     <section class="Episodes">
@@ -58,22 +62,24 @@
             <polygon fill="white" points="0,100 100,0 100,100"/>
         </svg>
         
-        <h2 class="Episodes-title" id=Episodes>Episodios</h2>
-        <iframe class="Episodes-spotify" src="https://open.spotify.com/embed-podcast/episode/461HCX0L3o4GO4BwbtOkqT" width="100" height="232" allow="encrypted-media"></iframe>        
-        <iframe class="Episodes-spotify" src="https://open.spotify.com/embed-podcast/episode/10m1knAKviCNOv8BR72STV" width="100" height="232" allow="encrypted-media"></iframe>
-        <iframe class="Episodes-spotify" src="https://open.spotify.com/embed-podcast/episode/57GJ09Pp7Gz4SWgHVTZe0K" width="100" height="232" allow="encrypted-media"></iframe>
-        <iframe class="Episodes-spotify" src="https://open.spotify.com/embed-podcast/episode/1KZ5HV2uUjFpAGCMqf7X71" width="100" height="380" allow="encrypted-media"></iframe>        
+        <h2 class="Episodes-title" id="Episodes">Episodios</h2>
+        <!-- <div class="Episodes-SpotiBlock">             -->
+        <iframe class="Episodes-spotify SpotiOne"  src="https://open.spotify.com/embed-podcast/episode/461HCX0L3o4GO4BwbtOkqT" width="100" height="232" allow="encrypted-media"></iframe>        
+        <iframe class="Episodes-spotify SpotiTwo" src="https://open.spotify.com/embed-podcast/episode/10m1knAKviCNOv8BR72STV" width="100" height="232" allow="encrypted-media"></iframe>
+        <iframe class="Episodes-spotify SpotiThree" src="https://open.spotify.com/embed-podcast/episode/57GJ09Pp7Gz4SWgHVTZe0K" width="100" height="232" allow="encrypted-media"></iframe>
+        <iframe class="Episodes-spotify SpotiFour" src="https://open.spotify.com/embed-podcast/episode/1KZ5HV2uUjFpAGCMqf7X71" width="100" height="232" allow="encrypted-media"></iframe>        
+        <!-- </div> -->
     </section>
 
     <section class="AboutUs">
         <img class="AboutUs-phone" src="./images/phone.png" alt="teléfono The secret history of women in coding">        
 
-        <h2 class="AboutUs-title" id="AboutUs" >De dónde venimos</h2>
-        <p class="AboutUs-paragraph">
+        <h2 class="AboutUs-title" id="AboutUs">De dónde venimos</h2>
+        <p class="AboutUs-paragraph paragraphBlockOne">
             Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.
         </p>
 
-        <p class="AboutUs-paragraph">
+        <p class="AboutUs-paragraph paragraphBlockTwo">
             Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
         </p>        
     </section>
@@ -83,12 +89,12 @@
             Invitadas/os estelares
         </h2>
 
-        <img class="Interviews-image" src="./images/grace-hopper.png" alt="Grace Hopper">
-        <img class="Interviews-image" src="./images/Katie-Bouman.png" alt="Katie Bouman">
-        <img class="Interviews-image" src="./images/Margaret_Hamilton.png" alt="Margaret Hamilton">
-        <img class="Interviews-image" src="./images/Univac-1103.png" alt="An E.R.A.Univac 1103 computer in the 1950s">
-        <img class="Interviews-image" src="./images/Eniac.png" alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer">
-        <img class="Interviews-image" src="./images/susan-kare.png" alt="Susan Kare">
+        <img class="Interviews-image Hopper" src="./images/grace-hopper.png" alt="Grace Hopper">
+        <img class="Interviews-image Bouman" src="./images/Katie-Bouman.png" alt="Katie Bouman">
+        <img class="Interviews-image Hamilton" src="./images/Margaret_Hamilton.png" alt="Margaret Hamilton">
+        <img class="Interviews-image Univac" src="./images/Univac-1103.png" alt="An E.R.A.Univac 1103 computer in the 1950s">
+        <img class="Interviews-image Eniac" src="./images/Eniac.png" alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer">
+        <img class="Interviews-image Kare" src="./images/susan-kare.png" alt="Susan Kare">
     </section>
 
     <section class="Topics">        
@@ -96,28 +102,28 @@
             Alguno de nuestros temas
         </h2>        
         
-        <div class="Topics-images">
+        <div class="Topics-images remote">
             <img class="Topics-image" src="./images/icon1.svg" alt="Icono de tres archivos apuntnado a bloque haciendo referencia a trabajo remoto">
             <h3 class="Topics-textImage">
                 Trabajo remoto
             </h3>            
         </div>
 
-        <div class="Topics-images">
+        <div class="Topics-images programming">
             <img class="Topics-image" src="./images/icon2.svg" alt="Icono de cabeza con engranaje haciendo referencia a repensar la programación">
             <h3 class="Topics-textImage">
                 Repensando la programación
             </h3>
-        </div>
+        </div>        
 
-        <div class="Topics-images">            
+        <div class="Topics-images codebase">            
             <img class="Topics-image" src="./images/icon3.svg" alt="Icono de laptop haciendo referencia a bases del código">
             <h3 class="Topics-textImage">
                 Bases del código
             </h3>
         </div>
 
-        <div class="Topics-images">            
+        <div class="Topics-images security">            
             <img class="Topics-image" src="./images/icon4.svg" alt="Icono de circuito con base de datos integrada haciendo referencia a seguridad informática">
             <h3 class="Topics-textImage">
                 Seguridad informática
@@ -132,7 +138,11 @@
 
         <h2 class="News-title">¿Querés las últimas novedades?</h2>
         
-        <div class="button">Escuchá los episodios</div>
+        <div class="button">
+            <a class="button-link" target="_blank" href="https://open.spotify.com/show/38fieckNwjpqWTtiPwiJ4i?si=C9GQX1JLRGyan8EnvFb5Aw">
+                Escuchá los episodios
+            </a>
+        </div>
     </section>
     
     <footer class="Footer">

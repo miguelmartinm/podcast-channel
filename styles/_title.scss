@@ -38,5 +38,39 @@
         @include button;
         
     }
+
+
+    @media screen and (min-width: 768px) {        
+        display: grid;
+        grid-template-columns: 5% 85% 5%;
+        grid-template-rows: 10% 20% 20% 35%;
+        gap: em(20) em(20);
+        // align-content: end;
+        justify-content: end;
+
+        &-WordsBlockThree {
+            display: inline-block;
+            // line-height: 0;
+            // margin: 0;
+        }
+        &-main {
+            margin: 0;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            justify-self: start;
+        }
+
+        &-paragraph {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            margin: 0;            
+        }
+
+        .button {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+            justify-self: center;
+        }
+    }
 }
 

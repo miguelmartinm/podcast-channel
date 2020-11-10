@@ -24,4 +24,37 @@
         color: rgba($color:#060A24, $alpha: 1.0);        
         @include font-family ('sans-semibold');
     }
+
+    @media screen and (min-width: 768px){
+        display: grid;
+        grid-template-columns: 5% 45% 45% 5%;
+        grid-template-rows: 10% 10% repeat(2, 40%);
+        align-content: center;
+
+        &-title {
+            margin: 0;
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+        }
+        
+        .remote {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .programming {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+        .codebase {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5; 
+        }
+
+        .security {
+            grid-column: 3 / 4;
+            grid-row: 4 / 5; 
+        }
+    }
 }

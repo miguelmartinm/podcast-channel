@@ -2,24 +2,20 @@
     position: relative;
     display: flex;
     background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-    margin-top: em(24);         
-    // min-height: em(1203.5);
-    // min-height: em(1600.5);
-    min-height: 100%;
-    // max-width: auto;
-    flex-direction: column;
-    
+    margin-top: em(24);             
+    min-height: 100%;    
+    flex-direction: column;    
     
     &-title {    
         text-align: center; 
         @include title-format-BittenCard;
     }
-
+    
     .button {
         position: relative;
         align-self: center;     
         margin-bottom: em(67);
-        @include button;
+        @include button;        
     }
 
     &-diagonalUp{
@@ -27,5 +23,11 @@
         top: 0;
         width: 100%;
         height: 10vw;        
+    }
+    
+    @media screen and (min-width: 768px) {
+        &-title {
+            margin-top: em(45);
+        }
     }
 }

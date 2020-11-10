@@ -6,7 +6,7 @@
 
     &-textBottom {
         width: 100%;
-        display: block;
+        // display: block;
         text-align: center;
         font-size: em(14);
         line-height: 22px;
@@ -20,7 +20,17 @@
         text-decoration: none;
         width: 16px;
         height: 16px;
-        display: inline-block;
-        // border: 1px solid;            
+        display: inline-block;     
+    }
+
+    @media screen and (min-width: 768px) {        
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 16px 0 16px;
+
+        &-textBottom {
+            display: inline;
+            width: 250px;
+        }
     }
 }

@@ -1,4 +1,4 @@
-.Navigation {
+ .Navigation {
     display: flex;    
     flex-wrap: wrap;         
     justify-content: space-between;
@@ -81,16 +81,7 @@
         opacity: 94%;
         position: absolute;  
         top: em(44);  
-        z-index: 3;
-
-        // &-link:hover {
-        //     position: absolute;  
-        //     z-index: 4;
-        //     opacity: 1;
-        // }
-        // &-item {
-        //     opacity: 1;
-        // }
+        z-index: 3;        
     }
 
     // &-hiddenCheckbox:checked, &-item {        

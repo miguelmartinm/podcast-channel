@@ -64,10 +64,29 @@ $browser-context: 16; // Default
     @include font-family("mono-medium");
     background: rgba($color:  #00F3BB, $alpha: 1.0);        
 
-    &:hover {
-        color: rgba($color: #FFFFFF, $alpha: 1.0);            
-        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);            
-        transition: all 0.4s ease;
+    // &:hover {        
+    //     background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);                    
+    // }
+
+    &-link {                        
+        display: block;            
+        text-decoration: none;  
+        color: rgba($color: #060A24, $alpha: 1.0);                  
+        
+        &:hover {
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);                    
+            animation-name: textColor;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;                
+            @keyframes textColor {
+                from {
+                    color: rgba($color: #060A24, $alpha: 1.0);    
+                }                
+                to {
+                    color: rgba($color: #FFFFFF, $alpha: 1.0);                        
+                }
+            }
+        }
     }
 }
 
@@ -77,6 +96,6 @@ $browser-context: 16; // Default
     color: rgba($color: #FFFFFF, $alpha: 1.0);
     @include font-family ('sans');        
     font-size: em(36);
-    margin: em(30) 0 21px 16px;     
+    margin: em(30) 0 em(21) em(6);
 }
 

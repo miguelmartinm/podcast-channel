@@ -21,4 +21,37 @@
     &-paragraph {
         @include paragraph-format;        
     }
+
+    @media screen and (min-width: 765px) {
+        display: grid;            
+        grid-template-columns: 5% 40% 45% 5%;
+        grid-template-rows: 10% 40% 40%;        
+
+        &-phone {
+            grid-column: 2 / 3;
+            grid-row: 1 / 4;
+            align-self: start;
+            justify-self: center;            
+        }
+
+        &-title {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            margin: 0;
+        }
+
+        .paragraphBlockOne {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            align-self: center;
+            margin: 0;
+        }
+
+        .paragraphBlockTwo {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;    
+            margin: 0;
+        }
+
+    }
 }
