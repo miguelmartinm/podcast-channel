@@ -26,8 +26,28 @@
     }
     
     @media screen and (min-width: 768px) {
-        &-title {
+        &-title {            
             margin-top: em(45);
         }
+    }
+    @media screen and (min-width: 1024px) {        
+        
+        &-title {
+            font-size: em(48);             
+        }
+
+        .button {            
+            font-size: em(18); 
+            width: em(345);
+            height: em(56); 
+            justify-self: start;
+            line-height: em(58);       
+        }
+    }
+
+    @media screen and (min-width: 1440px) {        
+        &-title {            
+            margin-top: 4em;
+        }        
     }
 }

@@ -1,7 +1,6 @@
 $browser-context: 16; // Default
 @function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
-    // @return ($pixels/$context)*1em;
+  @return #{$pixels/$context}em;    
 }
 
 @mixin font-family ($type-font) {
@@ -39,7 +38,7 @@ $browser-context: 16; // Default
 
 @mixin title-format {
     font-size: em(36);
-    margin: 40px 16px 16px 16px;
+    margin: 29px 16px 16px 16px;
     line-height: 42px;
     @include font-family ('sans-medium');  
     color: rgba($color: #060A24, $alpha: 1.0);
@@ -64,10 +63,6 @@ $browser-context: 16; // Default
     @include font-family("mono-medium");
     background: rgba($color:  #00F3BB, $alpha: 1.0);        
 
-    // &:hover {        
-    //     background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);                    
-    // }
-
     &-link {                        
         display: block;            
         text-decoration: none;  
@@ -91,11 +86,9 @@ $browser-context: 16; // Default
 }
 
 @mixin title-format-BittenCard {
-    position: relative;        
-    // top: 60px;
+    position: relative;            
     color: rgba($color: #FFFFFF, $alpha: 1.0);
     @include font-family ('sans');        
     font-size: em(36);
-    margin: em(30) 0 em(21) em(6);
+    margin: em(35) 0 em(21) em(6);
 }
-

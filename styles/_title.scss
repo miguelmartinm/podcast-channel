@@ -1,20 +1,9 @@
 .title  {    
-    display: flex;
-    // margin: em(29) em(16) 0 em(16);       
-    // line-height: em(42);
-    // justify-content: center;
-    // flex-wrap: wrap;
-    // position: relative;
-    // text-align: center;zz
+    display: flex;    
     flex-direction: column;
     
-    &-main {
-        // font-size: em(36);
-        // @include font-family("sans");
-        // color: rgba($color:#060A24, $alpha: 1.0);                               
-        @include title-format;
-        // margin-bottom: em(16);        
-        // align-self: flex-start;
+    &-main {        
+        @include title-format;        
     }
     &-WordsBlockOne {
         text-transform: capitalize;
@@ -39,38 +28,60 @@
         
     }
 
-
     @media screen and (min-width: 768px) {        
         display: grid;
-        grid-template-columns: 5% 85% 5%;
-        grid-template-rows: 10% 20% 20% 35%;
-        gap: em(20) em(20);
-        // align-content: end;
-        justify-content: end;
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 20% 35%;
+        gap: em(20) em(20);       
+        margin: em(50) 0 0 em(50);
+        
+        justify-content: center;
 
         &-WordsBlockThree {
-            display: inline-block;
-            // line-height: 0;
-            // margin: 0;
+            display: inline-block;            
         }
+        
         &-main {
             margin: 0;
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
             justify-self: start;
         }
 
         &-paragraph {
-            grid-column: 2 / 3;
-            grid-row: 3 / 4;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
             margin: 0;            
         }
 
         .button {
-            grid-column: 2 / 3;
-            grid-row: 4 / 5;
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
             justify-self: center;
         }
+    }
+
+    @media screen and (min-width: 1024px) {        
+
+        &-main {
+            font-size: em(64);
+        }
+
+        &-paragraph {
+            font-size: em(16);
+        }
+
+        .button {
+            font-size: em(18); 
+            width: em(226);
+            height: em(56); 
+            justify-self: start;
+            line-height: em(58);       
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        margin: em(120) 0 0 em(200);
     }
 }
 
